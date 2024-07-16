@@ -35,7 +35,7 @@ export const TransactionPage = ()=>{
             </div>
             <button
              onClick={()=>{
-                axios.post("https://payment-app-beta-u10o.onrender.com/api/v1/account/transfer",
+                axios.post("https://payment-app-beta-2.onrender.com/api/v1/account/transfer",
                     {
                         amt:amount,
                         to:user._id

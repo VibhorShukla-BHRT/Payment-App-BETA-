@@ -16,7 +16,7 @@ export const DashboardPage = ()=>{
   useEffect(()=>{
   const fetchBalance = async()=>{
     try{
-      const resp = await axios.get("https://payment-app-beta-u10o.onrender.com/api/v1/account/balance",{
+      const resp = await axios.get("https://payment-app-beta-2.onrender.com/api/v1/account/balance",{
         headers:{
           'Authorization': "Bearer "+localStorage.getItem("token")
         }
@@ -31,7 +31,7 @@ export const DashboardPage = ()=>{
   useEffect(()=>{
     const fetchUsers = async ()=>{
       try{
-        const resp = await axios.get(`https://payment-app-beta-u10o.onrender.com/api/v1/user/bulk?filter=${inp}`);
+        const resp = await axios.get(`https://payment-app-beta-2.onrender.com/api/v1/user/bulk?filter=${inp}`);
         const finalUsers = resp.data.user;
         setCur(finalUsers.filter(user=>user._id===decoded.id));
         setUsers(finalUsers.filter(user=>user._id!=decoded.id));

@@ -29,7 +29,7 @@ export const SignUpPage = ()=>{
     setPass(e.target.value);
   }}/>
   <Button onClick={async ()=>{
-    const resp = await axios.post("https://payment-app-beta-u10o.onrender.com/api/v1/user/signup",{
+    const resp = await axios.post("https://payment-app-beta-2.onrender.com/api/v1/user/signup",{
       username: email,
       firstName: fn,
       lastName: ln,
